@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Appointment</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="login-box">
+        <h2>Book Appointment</h2>
+        <form method="POST">
+            <input type="text" name="patient_id" placeholder="Patient ID" required><br><br>
+            <input type="date" name="date" required><br><br>
+            <input type="time" name="time" required><br><br>
+            <select name="doctor" required>
+                <option value="">Select Doctor</option>
+                <option value="Dr. Smith">Dr. Smith</option>
+                <option value="Dr. Jane">Dr. Jane</option>
+            </select><br><br>
+            <button type="submit">Book Appointment</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Health Center Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Health Center</h1>
+
+        <div class="card-grid">
+            <a href="{{ url_for('register') }}" class="card">
+                <i class="fas fa-user-plus fa-3x"></i>
+                <h3>Register Patient</h3>
+                <p>Add new patient to the system</p>
+            </a>
+
+            <a href="{{ url_for('appointment') }}" class="card">
+                <i class="fas fa-calendar-check fa-3x"></i>
+                <h3>Book Appointment</h3>
+                <p>Schedule a visit with a doctor</p>
+            </a>
+
+            <a href="{{ url_for('login') }}" class="card logout">
+                <i class="fas fa-sign-out-alt fa-3x"></i>
+                <h3>Logout</h3>
+                <p>End your session</p>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
